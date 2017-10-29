@@ -29,11 +29,7 @@ app.on('ready', () => {
     })
 
     //keyboard shortcuts
-    globalShortcut.register('CommandOrControl+H', () => { //help
-        //initialize help window
-        let helpWin = new BrowserWindow({width: 300, height: 200});
-        helpWin.loadURL(`file://${__dirname}/help.html`);
-    });
+
     globalShortcut.register('CommandOrControl+Q', () => { //quit
         app.quit();
     });
