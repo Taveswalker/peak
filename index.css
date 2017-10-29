@@ -24,11 +24,3 @@ header, footer{
     text-align: center;
     background-color: #ecf0f1;
 }
-.note{
-    width: auto;
-    height: 100px;
-    margin: 5px !important;
-    padding: 6px;
-    background-color: #ecf0f1;
-    border-radius: 2px;
-}
