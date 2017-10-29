@@ -18,8 +18,17 @@ header, footer{
     padding-top: 15px;
     padding-bottom: 15px;
     margin-top: 10px;
+    margin-bottom: 30px;
     font-family: "walkway";
     font-size: 40px;
     text-align: center;
     background-color: #ecf0f1;
+}
+.note{
+    width: auto;
+    height: 100px;
+    margin: 5px !important;
+    padding: 6px;
+    background-color: #ecf0f1;
+    border-radius: 2px;
 }

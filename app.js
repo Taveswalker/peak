@@ -5,9 +5,17 @@ app.on('ready', () => {
     //requiring display after app is loaded (it's necessary)
     const display = electron.screen.getPrimaryDisplay();
     const workArea = {width: display.workArea.width, height: display.workArea.height}
+    const winDim = {width: (workArea.width*.2)+1, height: workArea.height}
 
     //window initialization linking to index.html
-    let win = new BrowserWindow({width: (workArea.width*.2), height: workArea.height, resizable: false, movable: false, x: (workArea.width - win.width),y: 0});
+    let win = new BrowserWindow({
+        width: winDim.width,
+        height: winDim.height,
+        resizable: false,
+        movable: false,
+        x: (workArea.width - (winDim.width-1)),
+        y: 0
+    });
     win.loadURL(`file://${__dirname}/index.html`);
 
     //construct and implement menu
@@ -32,4 +40,4 @@ app.on('ready', () => {
     globalShortcut.register('CommandOrControl+`', () => { //dev tools
         win.toggleDevTools();
     });
-})
+});
